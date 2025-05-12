@@ -8,12 +8,26 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-.logooo{
+.logooo {
     font-family: 'Cedarville Cursive', cursive;
-    font-size: 36px; /* Adjust size as needed */
+    font-size: 36px;
     font-weight: bold;
-    color: #8AC01D;
-}
+    background: linear-gradient(135deg, #F857A6, #FF5858);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
+  }
+  
+  .logooo:hover {
+    transform: scale(1.1);
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(248, 87, 166, 0.5), 0 0 20px rgba(255, 88, 88, 0.4);
+  }
+  
+  
+  
+  
 html{
     scroll-behavior: smooth;
 }
@@ -233,6 +247,55 @@ section .title::after{
 .scroll-up-btn:hover{
     filter: brightness(90%);
 }
+
+/* Navbar links base styling */
+.menu li a.nav-link,
+.menu li a.btn-box {
+  position: relative;
+  padding: 8px 12px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  color: #fff;
+}
+
+/* Hover underline animation */
+.menu li a.nav-link::after,
+.menu li a.btn-box::after,
+.menu li a.nav-link.active::after,
+.menu li a.btn-box.active::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #8AC01D;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Hover color */
+.menu li a.nav-link:hover,
+.menu li a.btn-box:hover {
+  color: #8AC01D;
+}
+
+/* Hover underline */
+.menu li a.nav-link:hover::after,
+.menu li a.btn-box:hover::after {
+  width: 100%;
+}
+
+/* KEEP underline for active section */
+.menu li a.nav-link.active,
+.menu li a.btn-box.active {
+  color: #8AC01D;
+}
+
+.menu li a.nav-link.active::after,
+.menu li a.btn-box.active::after {
+  width: 100%;
+}
+
 /* home section styling */
 .home1{
     display: flex;
